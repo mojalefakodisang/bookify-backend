@@ -1,0 +1,8 @@
+django
+mysqlclient
+pillow
+django
+gunicorn
+django-bootstrap4<=24.3
+djangorestframework 
+djangorestframework-simplejwt
