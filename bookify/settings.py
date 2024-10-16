@@ -91,14 +91,14 @@ WSGI_APPLICATION = 'bookify.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bookify',
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'USER': 'mojalefakodisang',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('PG_DB_NAME'),
+        'USER': os.getenv('PG_USER'),
+        'PASSWORD': os.getenv('PG_PASSWORD'),
+        'HOST': os.getenv('PG_HOST'),
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
