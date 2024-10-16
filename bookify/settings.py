@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-am5^=%tb5k@e2@x9vla0^8s5pm8ipvml^&l(njbog!&+iory9$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'bookify-backend-vees.onrender.com'
+]
 
 
 # Application definition
