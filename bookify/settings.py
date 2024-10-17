@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-am5^=%tb5k@e2@x9vla0^8s5pm8ipvml^&l(njbog!&+iory9$
 DEBUG = True
 
 ALLOWED_HOSTS = [
-	'https://bookify-backend-vees.onrender.com',
-    'https://bookifysa.me',
-    'https://www.bookifysa.me'
+	'bookify-backend-vees.onrender.com',
+    'bookifysa.me',
+    'www.bookifysa.me'
 ]
 
 
