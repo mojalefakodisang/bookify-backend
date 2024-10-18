@@ -29,7 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
 	'bookify-backend-vees.onrender.com',
     'bookifysa.me',
-    'www.bookifysa.me'
+    'www.bookifysa.me',
+    'localhost'
 ]
 
 
@@ -37,6 +38,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'users',
+    'books',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -104,8 +106,8 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         },
         'APP': {
-            'client_id': os.getenv('GOOGLE_CLIENT_ID'),
-            'secret': os.getenv('GOOGLE_CLIENT_SECRET'),
+            'client_id': os.environ.get('GOOGLE_CLIENT_ID'),
+            'secret': os.environ.get('GOOGLE_CLIENT_SECRET'),
             'key': ''
         }
     }
@@ -120,10 +122,10 @@ WSGI_APPLICATION = 'bookify.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PG_DB_NAME'),
-        'USER': os.getenv('PG_USER'),
-        'PASSWORD': os.getenv('PG_PASSWORD'),
-        'HOST': os.getenv('PG_HOST'),
+        'NAME': os.environ.get('PG_DB_NAME'),
+        'USER': os.environ.get('PG_USER'),
+        'PASSWORD': os.environ.get('PG_PASSWORD'),
+        'HOST': os.environ.get('PG_HOST'),
         'PORT': '5432',
     }
 }
